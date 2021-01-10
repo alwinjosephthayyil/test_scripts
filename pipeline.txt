@@ -74,7 +74,7 @@ pipeline {
 				])			
 				 echo "trdd"
 				//we create the user defined network here.
-				C:\Program Files\Git\usr\bin\nohup.exe  "docker network create ${owaspZapNet}"
+				C:/Program Files/Git/usr/bin/nohup.exe  "docker network create ${owaspZapNet}"
  				echo "wal"
                 script{
 					//we start up the dvwa container
