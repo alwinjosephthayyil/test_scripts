@@ -6,8 +6,9 @@ def owaspZapNet = "owasp-zap-net"
  
 // a groovy function that stops and removes the DVWA container
 def stopAndRemoveDVWAContainer(dvwaContainerName) {
+	echo "test :: ${dvwaContainerName}" 
 	def shellOutput = sh(script: "docker ps -aqf \"name=${dvwaContainerName}\"",returnStdout: true).trim()
- 
+ 	echo "done :: shellOutput"
 	//note the double quotes to use variable substitution
 	echo "dvwa container id: ${shellOutput}"
  
