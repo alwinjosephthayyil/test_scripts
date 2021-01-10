@@ -75,7 +75,7 @@ pipeline {
 				 echo "trdd"
 				//we create the user defined network here.
 				sh "docker network create ${owaspZapNet}"
- echo "wal"
+ 				echo "wal"
                 script{
 					//we start up the dvwa container
 					echo "al"
