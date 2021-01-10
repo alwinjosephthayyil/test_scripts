@@ -157,6 +157,7 @@ pipeline {
         always { 
 			script{
 				//cleaning up the build by stopping and removing the dvwa docker containers and network
+				echo "alwin"
 				stopAndRemoveDVWAContainer(dvwaContainerName)
 				echo "removing network ${owaspZapNet}"
 				sh "docker network rm ${owaspZapNet}"
