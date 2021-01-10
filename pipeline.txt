@@ -71,7 +71,7 @@ pipeline {
 					userRemoteConfigs: [[
 					url: 'https://github.com/augmentonesecurity/dvwa_owasp_zap_config.git']],
 				])			
- 
+				 echo "trdd"
 				//we create the user defined network here.
 				sh "docker network create ${owaspZapNet}"
  
