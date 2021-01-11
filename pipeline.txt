@@ -75,7 +75,7 @@ pipeline {
 				 echo "trdd"
 				//we create the user defined network here.
 				echo "${owaspZapNet}"
-				sh  "docker network create ${owaspZapNet}"
+				//sh  "docker network create ${owaspZapNet}"
  				echo "wal"
                 script{
 					//we start up the dvwa container
@@ -161,9 +161,9 @@ pipeline {
 			script{
 				//cleaning up the build by stopping and removing the dvwa docker containers and network
 				echo "alwin"
-				//stopAndRemoveDVWAContainer(dvwaContainerName)
-				//echo "removing network ${owaspZapNet}"
-				//sh "docker network rm ${owaspZapNet}"
+				stopAndRemoveDVWAContainer(dvwaContainerName)
+				echo "removing network ${owaspZapNet}"
+				sh "docker network rm ${owaspZapNet}"
 				echo "END."
 			}
         }
